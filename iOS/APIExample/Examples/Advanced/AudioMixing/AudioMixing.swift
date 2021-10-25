@@ -12,7 +12,7 @@ import AGEVideoLayout
 
 let EFFECT_ID:Int32 = 1
 
-class AudioMixingEntry : UIViewController
+class AudioMixingEntry : AGViewController
 {
     @IBOutlet weak var joinButton: AGButton!
     @IBOutlet weak var channelTextField: AGTextField!
