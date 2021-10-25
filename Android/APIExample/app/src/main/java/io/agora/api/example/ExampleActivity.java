@@ -16,6 +16,7 @@ import io.agora.api.example.examples.advanced.ARCore;
 import io.agora.api.example.examples.advanced.AdjustVolume;
 import io.agora.api.example.examples.advanced.ChannelEncryption;
 import io.agora.api.example.examples.advanced.CustomRemoteVideoRender;
+import io.agora.api.example.examples.advanced.ExternalAudioSink;
 import io.agora.api.example.examples.advanced.GeoFencing;
 import io.agora.api.example.examples.advanced.HostAcrossChannel;
 import io.agora.api.example.examples.advanced.InCallReport;
@@ -157,6 +158,9 @@ public class ExampleActivity extends AppCompatActivity {
                 break;
             case R.id.action_mainFragment_raw_audio:
                 fragment = new ProcessAudioRawData();
+                break;
+            case R.id.action_mainFragment_audio_sink:
+                fragment = new ExternalAudioSink();
                 break;
             default:
                 fragment = new JoinChannelAudio();

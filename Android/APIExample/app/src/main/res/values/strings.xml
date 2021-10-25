@@ -89,7 +89,7 @@
     <string name="item_rtmpinjection">Inject Online Media Stream</string>
     <string name="item_pushexternal">Custom Video Source(Push)</string>
     <string name="item_switchexternal">Custom Video Source(MediaIO)</string>
-    <string name="item_customaudiosource">Custom Audio Source/Renderer</string>
+    <string name="item_customaudiosource">Custom Audio Source</string>
     <string name="item_customremoterender">Custom Video Renderer</string>
     <string name="item_processraw">Raw Video/Audio Data</string>
     <string name="item_videometadata">Video Metadata(SEI)</string>
@@ -158,4 +158,6 @@
     <string name="track_change">change track(%d)</string>
     <string name="track_last">LAST</string>
     <string name="track_next">NEXT</string>
+    <string name="audiosink">Custom Audio Renderer</string>
+    <string name="audiosinktip">This example demostrates how use external audio sink API to render audio during real time communcation.</string>
 </resources>
