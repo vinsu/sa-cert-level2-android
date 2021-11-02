@@ -449,7 +449,7 @@ LRESULT CDlgScreenCapturer::OnEIDSubscribeRemoteVideo(WPARAM wParam, LPARAM lPar
 	agora::rtc::VideoTrackInfo trackInfo;
 	videoTrack->getTrackInfo(trackInfo);
 	char szVideoTrack[MAX_PATH] = { 0 };
-	sprintf_s(szVideoTrack, MAX_PATH, "%u%u", trackInfo.ownerUid, trackInfo.trackId);
+	sprintf_s(szVideoTrack, MAX_PATH, "%s%u", trackInfo.ownerUserId, trackInfo.trackId);
 
 	if (m_mapUserVideoTrack.find(szVideoTrack) == m_mapUserVideoTrack.end()) {
 		int index = m_mapUserVideoTrack.size();

@@ -8,6 +8,7 @@
 
 #include "IAgoraMediaPlayerSource.h"
 #include "NGIAgoraMediaNodeFactory.h"
+#include "NGIAgoraMediaNode.h"
 #include "IAgoraService.h"
 #include "NGIAgoraVideoTrack.h"
 #include "NGIAgoraAudioTrack.h"
