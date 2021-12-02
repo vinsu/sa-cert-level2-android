@@ -296,4 +296,7 @@ public class MediaDataObserverPlugin implements MediaPreProcessing.ProgressCallb
         byteBufferAudioMix.clear();
     }
 
+    public void Speech2Text() {
+
+    }
 }

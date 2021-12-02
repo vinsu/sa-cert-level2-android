@@ -1,9 +1,14 @@
 package io.agora.advancedvideo.rawdata;
 
+import android.speech.SpeechRecognizer;
+
 import java.nio.ByteBuffer;
 
 /**This class is mainly used to interact with the underlying C++*/
 public class MediaPreProcessing {
+
+    public SpeechRecognizer mSpeechRecognizer;
+
     static {
         System.loadLibrary("apm-plugin-raw-data");
     }
@@ -52,6 +57,8 @@ public class MediaPreProcessing {
 
         /**Retrieves the mixed recorded and playback audio frame.*/
         void onMixedAudioFrame(int audioFrameType, int samples, int bytesPerSample, int channels, int samplesPerSec, long renderTimeMs, int bufferLength);
+
+        void Speech2Text();
     }
 
     public static native void setCallback(ProgressCallback callback);
@@ -69,5 +76,7 @@ public class MediaPreProcessing {
     public static native void setVideoDecodeByteBuffer(int uid, ByteBuffer byteBuffer);
 
     public static native void releasePoint();
+
+
 
 }

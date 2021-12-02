@@ -247,6 +247,14 @@ public:
         memcpy(audioFrame.buffer, byteBuffer, (size_t) len);
     }
 
+    void Speech2Text(AudioFrame &audioFrame) {
+    //call thrird-party API such as google spech to text cloud API, tensorflow-speech-recognition , or hive ..
+#ifdef SPEECH2TEXT
+        mSpeechRecognizer->Speech2Text(audioFrame);
+#endif
+
+    }
+
 public:
     /**Retrieves the recorded audio frame.
      * @param audioFrame
@@ -283,6 +291,7 @@ public:
     {
         getAudioFrame(audioFrame, playBeforeMixAudioMethodId, _javaDirectPlayBufferBeforeMixAudio,
                       uid);
+        Speech2Text(audioFrame); //for audio moderation via text content, like hive
         writebackAudioFrame(audioFrame, _javaDirectPlayBufferBeforeMixAudio);
         return true;
     }
